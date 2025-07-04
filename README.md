@@ -11,3 +11,11 @@ devtools::install_github("florisvanvugt/dycorr", upgrade_dependencies = FALSE)
 
 Will follow.
 
+
+
+# Building
+
+```{r}
+devtools::document(pkg=".")
+devtools::check(pkg=".")
+```
