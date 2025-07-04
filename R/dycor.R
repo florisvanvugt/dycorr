@@ -70,7 +70,7 @@ ax.ay <- function(.data, ax, ay, bx, by) {
     if(!(bx %in% names(.data))) { warning(sprintf("Column bx (%s) not found in data frame.",bx)) }
     if(!(by %in% names(.data))) { warning(sprintf("Column by (%s) not found in data frame.",by)) }
     if (dplyr::is_grouped_df(.data)) {
-      return(dplyr::do(.data, ax.ay(ax=ax,ay=ay,bx=bx,by=by)))
+      return(dplyr::do(.data, ax.ay(.,ax=ax,ay=ay,bx=bx,by=by)))
     }
     struct <- cor.structure(.data[[ax]],.data[[ay]],.data[[bx]],.data[[by]])
     N.star.1 <- (2*struct$N.dyads)/(1+ (struct$raxbx*struct$rayby) + struct$raxby**2) ## G&G1995 p.432
@@ -118,7 +118,7 @@ ax.by <- function(.data, ax, ay, bx, by) {
     if(!(bx %in% names(.data))) { warning(sprintf("Column bx (%s) not found in data frame.",bx)) }
     if(!(by %in% names(.data))) { warning(sprintf("Column by (%s) not found in data frame.",by)) }
     if (dplyr::is_grouped_df(.data)) {
-      return(dplyr::do(.data, ax.by(ax=ax,ay=ay,bx=bx,by=by)))
+      return(dplyr::do(.data, ax.by(.,ax=ax,ay=ay,bx=bx,by=by)))
     }
     struct <- cor.structure(.data[[ax]],.data[[ay]],.data[[bx]],.data[[by]])
     N.star.2 <- (2*struct$N.dyads)/(1+ (struct$raxbx*struct$rayby) + struct$raxay**2) # G&G1995 p.432
