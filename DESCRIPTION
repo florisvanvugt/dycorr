@@ -1,0 +1,12 @@
+Package: dycorr
+Title: Calculating simple individual and partner correlations for dyadic data
+Version: 0.0.0.9000
+Authors@R: 
+    person("van Vugt", "Floris", , "ftvanvugt@gmail.com", role = c("aut", "cre"))
+Description: Based on the proposals by Griffin & Gonzales (1995), this package allows you
+to compute correlations on dyadic data and compute significance levels that have been
+corrected for potential within-dyad dependence.
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
