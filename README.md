@@ -81,11 +81,8 @@ Similarly:
 
 ```{r}
 dycor::ax.ay(data,ax,ay,bx,by) # within-individual correlation (controlling for dyadic dependence in data)
-dycor::ax.by(data,ax,ay,bx,by) # within-dyad correlation
+dycor::ax.by(data,ax,ay,bx,by) # within-dyad correlation (between dyadic partner's A and B)
 ```
-
-Will follow.
-
 
 
 # Building
